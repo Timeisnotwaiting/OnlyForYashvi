@@ -10,3 +10,5 @@ YashuAlpha = Client(":Yashvi:", API_ID, API_HASH, BOT_TOKEN)
 async def kiss(_, m):
     if not m.reply_to_message:
         return 
+    if m.from_user.id == YASHUALPHA[3] or m.from_user.id == YASHUALPHA[4]:
+        
