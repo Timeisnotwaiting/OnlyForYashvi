@@ -1,6 +1,12 @@
 from pyrogram import Client, filters
 from pyrogram.filters import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from config import *
+from random import choice
+
+KISS = ["https://te.legra.ph/file/3bf7cc60c09e9c1f1ea81.jpg",
+        "https://te.legra.ph/file/4b80e2a5fe1671bb3f951.jpg",
+        "https://te.legra.ph/file/5865758b24bcedb3b582c.jpg"
+       ]
 
 MARKUP = InlineKeyboardButton[
                 [("✅", data="k_accept"),
