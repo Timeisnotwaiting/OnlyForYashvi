@@ -34,7 +34,7 @@ async def kiss(_, m):
     else:
         await _.send_message(m.chat.id, "Alpha 💭 wants to kiss Yashu 💭", reply_markup=InlineKeyboardMarkup(MARKUP))
 
-@YashuAlpha.on_callback_query(filters.regex("k_accept"))
+@YashuAlpha.on_callback_query()
 async def cbquery(_, c: CallbackQuery):
     if c.data == "k_accept":
         if c.from_user.id == init:
