@@ -41,9 +41,9 @@ async def cbquery(_, c: CallbackQuery):
             return await c.answer()
         if c.from_user.id not in YASHUALPHA:
             return await c.answer("This is only for YASHU-ALPHA !", show_alert=True)
-        alpha_m = (await _.get_users(init)).username
-        yashu_m = (await _.get_users(c.from_user.id)).username
-        await c.message.reply_photo(choice(KISS), f" ["👰‍♀️"](t.me/{yashu_m}) ["🤵"](t.me/{alpha_m})")
+        alpha_m = (await _.get_users(init)).mention
+        yashu_m = (await _.get_users(c.from_user.id)).mention
+        await c.message.reply_photo(choice(KISS), f"{yashu_m} {alpha_m}")
         await c.message.delete()
         await c.answer()
     elif c.data == "k_reject":
