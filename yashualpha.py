@@ -52,3 +52,6 @@ async def cbquery(_, c: CallbackQuery):
         if c.from_user.id not in YASHUALPHA:
             return await c.answer("This is only for YASHU-ALPHA !", show_alert=True)
         await c.message.delete()
+
+
+YashuAlpha.run()
