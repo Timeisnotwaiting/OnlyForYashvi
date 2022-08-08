@@ -55,3 +55,4 @@ async def cbquery(_, c: CallbackQuery):
 
 
 YashuAlpha.run()
+print("bot started !")
