@@ -46,3 +46,10 @@ async def cbquery(_, c: CallbackQuery):
         await c.message.reply_photo(choice(KISS), f" ["👰‍♀️"](t.me/{yashu_m}) ["🤵"](t.me/{alpha_m})")
         await c.message.delete()
         await c.answer()
+    elif c.data == "k_reject":
+        if c.data == "k_accept":
+        if c.from_user.id == init:
+            return await c.answer()
+        if c.from_user.id not in YASHUALPHA:
+            return await c.answer("This is only for YASHU-ALPHA !", show_alert=True)
+        await c.message.delete()
