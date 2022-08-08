@@ -1,4 +1,4 @@
-from pyrogram import Client, filters
+from pyrogram import Client, filters, idle
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from config import *
 from random import choice
@@ -54,5 +54,7 @@ async def cbquery(_, c: CallbackQuery):
         await c.message.delete()
 
 
-YashuAlpha.run()
+YashuAlpha.start()
+idle()
+YashuAlpha.stop()
 print("bot started !")
