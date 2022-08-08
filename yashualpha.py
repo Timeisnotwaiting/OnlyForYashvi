@@ -9,8 +9,8 @@ KISS = ["https://te.legra.ph/file/3bf7cc60c09e9c1f1ea81.jpg",
        ]
 
 MARKUP = [
-                InlineKeyboardButton["✅", data="k_accept"],
-                InlineKeyboardButton["❌", data="k_reject"],
+                InlineKeyboardButton["✅", callback_data="k_accept"],
+                InlineKeyboardButton["❌", callback_data="k_reject"],
          ]
 
 YASHUALPHA = [5296178757, 5285667393, 5432903250, 1985209910, 5429087029]
