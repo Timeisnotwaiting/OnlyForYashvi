@@ -47,7 +47,6 @@ async def cbquery(_, c: CallbackQuery):
         await c.message.delete()
         await c.answer()
     elif c.data == "k_reject":
-        if c.data == "k_accept":
         if c.from_user.id == init:
             return await c.answer()
         if c.from_user.id not in YASHUALPHA:
