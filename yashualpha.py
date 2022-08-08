@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from pyrogram.filters import Message, InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.filters import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from config import *
 
 MARKUP = InlineKeyboardButton[
@@ -8,6 +8,10 @@ MARKUP = InlineKeyboardButton[
             ]
 
 YASHUALPHA = [5296178757, 5285667393, 5432903250, 1985209910, 5429087029]
+
+YASHU = [5296178757, 5285667393, 5432903250]
+
+ALPHA = [1985209910, 5429087029]
 
 YashuAlpha = Client(":Yashvi:", API_ID, API_HASH, BOT_TOKEN)
 
@@ -19,3 +23,8 @@ async def kiss(_, m):
         await _.send_message(m.chat.id, "Alpha 💭 wants to kiss Yashu 💭", reply_markup=InlineKeyboardMarkup(MARKUP))
     else:
         await _.send_message(m.chat.id, "Alpha 💭 wants to kiss Yashu 💭", reply_markup=InlineKeyboardMarkup(MARKUP))
+
+@YashuAlpha.on_callback_query(filters.regex("k_accept"))
+async def cbquery(_, c: CallbackQuery):
+    if c.data == "k_accept":
+        
