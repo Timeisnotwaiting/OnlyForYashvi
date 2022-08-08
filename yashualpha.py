@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from pyrogram.filters import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from config import *
 from random import choice
 
