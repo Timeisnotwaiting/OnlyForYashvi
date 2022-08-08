@@ -2,6 +2,11 @@ from pyrogram import Client, filters
 from pyrogram.filters import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from config import *
 
+MARKUP = InlineKeyboardButton[
+                [("✅", data="k_accept"),
+                ("❌", data="k_reject")]
+            ]
+
 YASHUALPHA = [5296178757, 5285667393, 5432903250, 1985209910, 5429087029]
 
 YashuAlpha = Client(":Yashvi:", API_ID, API_HASH, BOT_TOKEN)
@@ -11,4 +16,6 @@ async def kiss(_, m):
     if not m.reply_to_message and not m.reply_to_message.from_user.id in YASHUALPHA:
         return 
     if m.from_user.id == YASHUALPHA[3] or m.from_user.id == YASHUALPHA[4]:
-        await _.send_message(m.chat.id, f"Alpha 💭 wants to kiss Yashu 💭", reply_markup=InlineKeyboardMarkup(MARKUP))
+        await _.send_message(m.chat.id, "Alpha 💭 wants to kiss Yashu 💭", reply_markup=InlineKeyboardMarkup(MARKUP))
+    else:
+        await _.send_message(m.chat.id, "Alpha 💭 wants to kiss Yashu 💭", reply_markup=InlineKeyboardMarkup(MARKUP))
